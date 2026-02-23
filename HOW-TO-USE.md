@@ -70,7 +70,7 @@ set ANTHROPIC_API_KEY=sk-ant-paste-your-key-here
 ### Step 4 — Install the tools
 
 ```
-cd C:\Users\JLocal\claude-agent
+cd path\to\claude-agent
 pip install -r requirements.txt
 ```
 
@@ -83,7 +83,7 @@ pip install -r requirements.txt
 ### Open Terminal and type:
 
 ```
-cd C:\Users\JLocal\claude-agent
+cd path\to\claude-agent
 python main.py "your question here"
 ```
 
@@ -160,7 +160,7 @@ python main.py --deep -o report.md "How do black holes form?"
 │   Every time you want to use it:         │
 │                                          │
 │   1. Open Terminal                        │
-│   2. cd C:\Users\JLocal\claude-agent     │
+│   2. cd path\to\claude-agent     │
 │   3. python main.py "your question"      │
 │                                          │
 │   That's it. Three steps.                │

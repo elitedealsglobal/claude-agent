@@ -103,7 +103,7 @@ def parse_args() -> argparse.Namespace:
     p.add_argument(
         "--max-turns",
         type=int,
-        default=15,
+        default=None,
         help="Max agent turns (default: 15, deep mode: 30)",
     )
     p.add_argument(
@@ -149,7 +149,7 @@ async def run_agent(args: argparse.Namespace) -> None:
     print()
 
     system_prompt = DEEP_SYSTEM_PROMPT if args.deep else SYSTEM_PROMPT
-    max_turns = args.max_turns if args.max_turns != 15 else (30 if args.deep else 15)
+    max_turns = args.max_turns if args.max_turns is not None else (30 if args.deep else 15)
 
     options = ClaudeAgentOptions(
         system_prompt=system_prompt,
@@ -196,6 +196,7 @@ async def run_agent(args: argparse.Namespace) -> None:
     # Save to file if requested
     if args.output and final_text:
         output_path = Path(args.output)
+        output_path.parent.mkdir(parents=True, exist_ok=True)
         header = (
             f"# Research: {question}\n"
             f"_Generated {datetime.now(timezone.utc).strftime('%Y-%m-%d %H:%M UTC')}_\n\n"

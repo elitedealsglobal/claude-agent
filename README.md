@@ -116,6 +116,9 @@ claude-agent/
   requirements.txt    # Python dependencies
   .env.example        # API key template
   .gitignore          # Keeps secrets and junk out of git
+  LICENSE             # MIT license
+  README.md           # Setup and CLI reference
+  HOW-TO-USE.md       # Beginner-friendly guide
 ```
 
 ## License
