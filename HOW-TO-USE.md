@@ -160,7 +160,7 @@ python main.py --deep -o report.md "How do black holes form?"
 │   Every time you want to use it:         │
 │                                          │
 │   1. Open Terminal                        │
-│   2. cd path\to\claude-agent     │
+│   2. cd path\to\claude-agent              │
 │   3. python main.py "your question"      │
 │                                          │
 │   That's it. Three steps.                │
